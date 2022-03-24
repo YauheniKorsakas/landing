@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Kalam:wght@300&display=swap');
+
+$primary-font: 'Cinzel', sans-serif;
+$secondary-font: 'Kalam', sans-serif;
+
+$primary-color: black;
+$secondary-color: white;
+
+$primary-background-color: white;
+// $secondary-background-color: 
+
+$breakpoint-md: 768px;
+$breakpoint-lt: 576px;
+
+$animation-duration: 1.5s;
+$animation-function: cubic-bezier(.19, .91, .56, .99);

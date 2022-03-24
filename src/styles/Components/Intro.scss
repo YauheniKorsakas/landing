@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.Intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .text-presentation-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: .5rem .5rem 0;
+    position: relative;
+    
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
+
+      .full-name, .job-title {
+        position: relative;
+        font-family: $primary-font;
+        display: block;
+      }
+
+      .full-name {
+        font-size: 2.9rem;
+        animation: details-appearing $animation-duration $animation-function .2s;
+      }
+
+      .job-title {
+        font-size: 1.9rem;
+        animation: details-appearing $animation-duration $animation-function .5s;
+      }
+    }
+
+    .quote {
+      position: relative;
+      justify-self: flex-end;
+      font-family: $secondary-font;
+      font-size: .7rem;
+      animation: quote-appearing $animation-duration $animation-function 1s;
+    }
+  }
+
+  img {
+    position: relative;
+    animation: img-appearing $animation-duration $animation-function;
+  }
+
+  @keyframes img-appearing {
+    from { top: -100vh; opacity: 0; }
+    to { top: 0; opacity: 1; }
+  }
+
+  @keyframes details-appearing {
+    from { bottom: -100vh; opacity: 0; }
+    to { bottom: 0; opacity: 1; }
+  }
+
+  @keyframes quote-appearing {
+    from { left: -100vw; opacity: 0; }
+    to { left: 0; opacity: 1; }
+  }
+}
