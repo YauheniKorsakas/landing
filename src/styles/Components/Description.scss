@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.Description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: scroll;
+  background-color: $secondary-background-color;
+  color: $secondary-color;
+
+  * {
+    font-family: $secondary-font;
+  }
+
+  span {
+    color: $highlight-color;
+  }
+
+  .greetings, .skills-intro {
+    text-indent: 2rem;
+  }
+
+  .greetings {
+    padding-top: 1rem;
+  }
+
+  p, ul {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    max-width: 35rem;
+
+    li {
+      // TODO: add check icon
+    }
+  }
+
+}

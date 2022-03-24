@@ -31,13 +31,13 @@
 
       .full-name {
         font-size: 2.9rem;
-        animation: details-appearing $animation-duration $animation-function .2s;
+        animation: primary-appearing $animation-duration $animation-function .2s;
         animation-fill-mode: forwards;
       }
 
       .job-title {
         font-size: 1.9rem;
-        animation: details-appearing $animation-duration $animation-function .5s;
+        animation: primary-appearing $animation-duration $animation-function .5s;
         animation-fill-mode: forwards;
       }
     }
@@ -45,7 +45,7 @@
     .quote {
       position: relative;
       justify-self: flex-end;
-      color: $primary-color;
+      color: $highligh-titles-color;
       opacity: 0;
       font-weight: bold;
       font-family: $secondary-font;
@@ -63,11 +63,6 @@
   @keyframes img-appearing {
     from { top: -100vh; opacity: 0; }
     to { top: 0; opacity: 1; }
-  }
-
-  @keyframes details-appearing {
-    from { bottom: -100vh; opacity: 0; }
-    to { bottom: 0; opacity: 1; }
   }
 
   @keyframes quote-appearing {
