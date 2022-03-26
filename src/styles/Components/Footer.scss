@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.Footer {
+  height: 3rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-background-color;
+  
+  * {
+    font-family: $primary-font;
+    color: $secondary-color;
+  }
+
+  a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    transition: all .3s linear;
+    border-bottom: 1px solid transparent;
+    transition: border-color .5s ease;
+
+    &:hover {
+      border-color: white;
+    }
+  }
+}

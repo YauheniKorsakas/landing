@@ -26,7 +26,7 @@ const App = () => {
       <Intro />
       <Description ref={descriptionElement} />
       <Skills />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

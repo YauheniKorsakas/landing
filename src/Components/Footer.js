@@ -1,9 +1,13 @@
 import React from 'react'
-import '../styles/Components/Footer.module.scss';
+import '../styles/Components/Footer.scss';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <section className='Footer'>
+      <a href="https://www.linkedin.com/in/yauheni-korsakas-94bb91197/" target='_blank' rel="noreferrer">Linked In</a>
+      <a href="mailto:yauheni.korsakas@gmail.com">Gmail</a>
+      <a href="skype:live:yauheni.korsakas?chat">Skype</a>
+    </section>
   )
 }
 
