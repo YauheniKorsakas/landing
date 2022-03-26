@@ -1,0 +1,11 @@
+@import './variables.scss'; 
+
+@mixin appearing-animation($delay: 0s, $animation-name: primary-appearing) {
+  animation: $animation-name $animation-duration $animation-function $delay;
+  animation-fill-mode: forwards;
+}
+
+@mixin default-setup-before-animation() {
+  position: relative;
+  bottom: -100vh;
+}

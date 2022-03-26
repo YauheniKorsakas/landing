@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.SkillCard {
+  height: 100%;
+
+  * {
+    font-family: $primary-font;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 1.25rem);
+    list-style: none;
+    // border-right: 1px solid $divider-color;
+
+    li {
+      flex: 1;
+      font-weight: normal;
+      font-size: .9rem;
+    }
+  }
+
+  hr {
+    border-top: 1px solid $divider-color;
+    border-bottom: none;
+  }
+}
+
+
+/*
+@import '../variables.scss';
+
+.SkillCard {
+  height: 100%;
+
+  * {
+    font-family: $primary-font;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 1.25rem);
+    list-style: none;
+
+    li {
+      flex: 1;
+      font-weight: normal;
+      font-size: .9rem;
+    }
+  }
+
+  hr {
+    border-top: 1px solid $divider-color;
+    border-bottom: none;
+  }
+}*/

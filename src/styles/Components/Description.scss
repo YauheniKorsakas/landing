@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../mixins.scss';
 
 .Description {
   display: flex;
@@ -8,8 +9,8 @@
   padding: 3rem 4rem;
   width: 100vw;
   min-height: 100vh;
-  height: auto;
-  overflow-y: scroll;
+  height: 110vh;
+  overflow: hidden;
   background-color: $secondary-background-color;
   color: $secondary-color;
 
@@ -23,10 +24,25 @@
 
   .greetings, .skills-intro {
     text-indent: 2rem;
+
+    @include default-setup-before-animation;
   }
 
   .greetings {
     padding-top: 1rem;
+    // @include appearing-animation;
+  }
+
+  // .skills-intro {
+  //   @include appearing-animation(.5s);
+  // }
+
+  ul {
+    max-width: 35rem;
+    list-style: none;
+
+    @include default-setup-before-animation;
+    // @include appearing-animation(0.3s);
   }
 
   p, ul {
@@ -34,12 +50,24 @@
     padding-bottom: 1rem;
   }
 
-  ul {
-    max-width: 35rem;
-
-    li {
-      // TODO: add check icon
+  li {
+    svg {
+      color: $success-color;
     }
   }
 
+  &.animate {
+    .greetings {
+      @include appearing-animation;
+    }
+
+    .skills-intro {
+      @include appearing-animation(.5s);
+    }
+
+    ul {
+      @include appearing-animation(0.3s);
+    }
+  }
 }
+

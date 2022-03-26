@@ -1,9 +1,18 @@
-import React from 'react'
-import '../styles/Components/Description.scss'
+import React from 'react';
+import '../styles/Components/Description.scss';
+import { AiOutlineCheck } from 'react-icons/ai'
+import classNames from 'classnames';
 
-const Description = () => {
+const Description = ({ className = '' }) => {
+  const listItems = [
+    <>Monitor your health. No one will take care of you except yourself. I do it because I want <span>to</span></>,
+    <>Be able to get better every day <span>because</span></>,
+    <>I want to know how far I can go, striving for the ideal</>
+  ];
+  const postulates = listItems.map(item => <li key={item}><AiOutlineCheck /> {item}</li>);
+
   return (
-    <section className="Description">
+    <section className={classNames('Description animate', className)}>
       <p className='greetings'>
         Greetings. My name is Zhenya and I am a full stack web developer from Belarus. Being born in 1996,
         I have already managed to know different aspects of life in general and development, but it is still not enough to say
@@ -11,9 +20,7 @@ const Description = () => {
         is individual. And the life postulates that I adhere to are as <span>follows</span>
       </p>
       <ul>
-        <li>Monitor your health. No one will take care of you except yourself. I do it because I want <span>to</span></li>
-        <li>Be able to get better every day <span>because</span></li>
-        <li>I want to know how far I can go, striving for the ideal</li>
+        {postulates}
       </ul>
       <p className='skills-intro'>
         I have been working as a programmer since 2017, and during this time I managed to acquire many skills.
@@ -21,5 +28,9 @@ const Description = () => {
     </section>
   )
 }
+
+/*<AiOutlineCheck /><li>Monitor your health. No one will take care of you except yourself. I do it because I want <span>to</span></li>
+        <li>Be able to get better every day <span>because</span></li>
+        <li>I want to know how far I can go, striving for the ideal</li> */
 
 export default Description
