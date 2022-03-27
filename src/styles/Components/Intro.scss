@@ -46,12 +46,12 @@
       justify-self: flex-end;
       color: $highligh-titles-color;
       opacity: 0;
-      left: -100vw; 
+      left: -100vw;
       font-weight: bold;
       font-family: $secondary-font;
       font-size: .8rem;
 
-      @include transition-setup($delay: 1s);
+      @include transition-setup($delay: 5s);
     }
   }
 

@@ -3,7 +3,7 @@ import '../styles/Components/Intro.scss';
 import mainAvatar from '../assets/mainAvatar.jpg';
 import classNames from 'classnames';
 
-const Intro = ({ className }) => {
+const Intro = ({ className = '' }) => {
   return (
     <section className={classNames('Intro', className)}>
       <div className="text-presentation-container">

@@ -19,32 +19,34 @@
   }
 
   span {
-    // color: $highlight-color;
     border-bottom: 1px solid white;
     padding-bottom: 0;
   }
 
   .greetings, .skills-intro {
     text-indent: 2rem;
-
-    @include default-setup-before-animation;
+    position: relative;
+    bottom: -100vh;
+    opacity: 0;
   }
 
   .greetings {
     padding-top: 1rem;
-    // @include appearing-animation;
+    @include transition-setup;
   }
-
-  // .skills-intro {
-  //   @include appearing-animation(.5s);
-  // }
 
   ul {
     max-width: 35rem;
     list-style: none;
+    position: relative;
+    bottom: -100vh;
+    opacity: 0;
 
-    @include default-setup-before-animation;
-    // @include appearing-animation(0.3s);
+    @include transition-setup($delay: .3s);
+  }
+
+  .skills-intro {
+    @include transition-setup($delay: .5s);
   }
 
   p, ul {
@@ -52,23 +54,14 @@
     padding-bottom: 1rem;
   }
 
-  li {
-    svg {
-      color: $success-color;
-    }
+  li svg {
+    color: $success-color;
   }
 
-  &.animate {
-    .greetings {
-      @include appearing-animation;
-    }
-
-    .skills-intro {
-      @include appearing-animation(.5s);
-    }
-
-    ul {
-      @include appearing-animation(0.3s);
+  &.reveal {
+    .greetings, .skills-intro, ul {
+      opacity: 1;
+      bottom: 0;
     }
   }
 }

@@ -6,8 +6,11 @@ import Intro from './Components/Intro';
 import Skills from './Components/Skills';
 import './styles/App.scss';
 
+const revealClassName = 'reveal';
+
 const App = () => {
-  const [shouldRevealIntro, setShouldReveal] = useState(false);
+  const [shouldRevealIntro, setShouldRevealTntro] = useState(false);
+  const [shouldRevealDescription, setShouldRevealDescription] = useState(false);
 
   const onScroll = useCallback((e) => {
   }, []);
@@ -19,16 +22,19 @@ const App = () => {
   //     window.removeEventListener(onScroll, );
   //   }
   // }, [onScroll]);
-  setTimeout(() => {
-    setShouldReveal(true);
-  }, 500);
+  useEffect(() => {
+    setTimeout(() => {
+      setShouldRevealTntro(true);
+    }, 300);
+  }, []);
 
   return (
     <div className="App">
-      <Intro className={classNames({'reveal': shouldRevealIntro})}/>
-      {/* <Description />
-      <Skills />
-      <Footer /> */}
+      <button onClick={() => {setShouldRevealDescription(true)}}>set</button>
+      {/* <Intro className={classNames({'reveal': shouldRevealIntro})}/> */}
+      <Description className={classNames({'reveal': shouldRevealDescription})}/>
+      {/* <Skills /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

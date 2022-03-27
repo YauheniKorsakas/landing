@@ -12,7 +12,7 @@ const Description = ({ className = '' }) => {
   const postulates = listItems.map(item => <li key={item}><AiOutlineCheck /> {item}</li>);
 
   return (
-    <section className={classNames('Description animate', className)}>
+    <section className={classNames('Description', className)}>
       <p className='greetings'>
         Greetings. My name is Zhenya and I am a full stack web developer from Belarus. Being born in 1996,
         I have already managed to know different aspects of life in general and development, but it is still not enough to say

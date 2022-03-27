@@ -21,7 +21,6 @@ $animation-function: cubic-bezier(.19, .91, .56, .99);
 $transition-duration: 1.5s;
 $transition-function: cubic-bezier(.19, .91, .56, .99);
 
-
 @keyframes primary-appearing {
   from { bottom: -100vh; opacity: 0; }
   to { bottom: 0; opacity: 1; }
