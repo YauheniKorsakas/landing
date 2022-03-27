@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import '../styles/Components/Skills.scss';
 import SkillCard from './SkillCard';
-import ContactMe from './ContactMe';
 
 const Skills = () => {
   const cardData = useMemo(() =>
@@ -12,7 +11,6 @@ const Skills = () => {
   return (
     <section className='Skills'>
       {cardData}
-      <ContactMe />
     </section>
   )
 }

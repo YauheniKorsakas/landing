@@ -1,9 +1,11 @@
 import classNames from 'classnames';
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import Description from './Components/Description';
 import Footer from './Components/Footer';
 import Intro from './Components/Intro';
 import Skills from './Components/Skills';
+import ContactMe from './Components/ContactMe';
+import RevealContext from './contexts/RevealContext';
 import './styles/App.scss';
 
 const revealClassName = 'reveal';
@@ -11,9 +13,18 @@ const revealClassName = 'reveal';
 const App = () => {
   const [shouldRevealIntro, setShouldRevealTntro] = useState(false);
   const [shouldRevealDescription, setShouldRevealDescription] = useState(false);
+  const [shouldRevealSkills, setShouldRevealSkills] = useState(false);
 
   const onScroll = useCallback((e) => {
   }, []);
+
+  const revealInfo = useMemo(() => {
+    return {
+      intro: shouldRevealIntro,
+      description: shouldRevealDescription,
+      skills: shouldRevealSkills
+    };
+  }, [shouldRevealIntro, shouldRevealDescription, shouldRevealSkills]);
 
   // useEffect(() => {
   //   window.addEventListener('scroll', onScroll);
@@ -24,18 +35,21 @@ const App = () => {
   // }, [onScroll]);
   useEffect(() => {
     setTimeout(() => {
-      setShouldRevealTntro(true);
+      shouldRevealSkills(true);
     }, 300);
-  }, []);
+  }, [shouldRevealSkills]);
 
   return (
-    <div className="App">
-      <button onClick={() => {setShouldRevealDescription(true)}}>set</button>
-      {/* <Intro className={classNames({'reveal': shouldRevealIntro})}/> */}
-      <Description className={classNames({'reveal': shouldRevealDescription})}/>
-      {/* <Skills /> */}
-      {/* <Footer /> */}
-    </div>
+    <RevealContext.Provider value={revealInfo}>
+      <div className="App">
+        <button onClick={() => {setShouldRevealSkills(true)}}>set</button>
+        {/* <Intro className={classNames({'reveal': shouldRevealIntro})}/> */}
+        {/* <Description className={classNames({'reveal': shouldRevealDescription})}/> */}
+        <Skills />
+        <ContactMe /> {/* show when footer is in viewport */}
+        <Footer />
+      </div>
+    </RevealContext.Provider>
   );
 }
 

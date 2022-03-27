@@ -1,3 +1,6 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
 .Skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
