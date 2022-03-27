@@ -10,7 +10,7 @@ $highligh-titles-color: #3A2238;
 
 $primary-background-color: #fff;
 $secondary-background-color: #3A2238;
-
+$divider-color: rgba(58, 34, 56, .2);
 $success-color: rgb(34, 161, 34);
 
 $breakpoint-md: 768px;
@@ -18,8 +18,9 @@ $breakpoint-lt: 576px;
 
 $animation-duration: 1.5s;
 $animation-function: cubic-bezier(.19, .91, .56, .99);
+$transition-duration: 1.5s;
+$transition-function: cubic-bezier(.19, .91, .56, .99);
 
-$divider-color: rgba(58, 34, 56, .2);
 
 @keyframes primary-appearing {
   from { bottom: -100vh; opacity: 0; }

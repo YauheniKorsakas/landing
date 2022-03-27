@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../mixins.scss';
 
 .Intro {
   display: flex;
@@ -26,18 +27,17 @@
         position: relative;
         font-family: $primary-font;
         opacity: 0;
+        bottom: -100vh;
       }
 
       .full-name {
-        font-size: 2.9rem;
-        animation: primary-appearing $animation-duration $animation-function .2s;
-        animation-fill-mode: forwards;
+        font-size: 3rem;
+        @include transition-setup($delay: .2s);
       }
 
       .job-title {
-        font-size: 1.9rem;
-        animation: primary-appearing $animation-duration $animation-function .5s;
-        animation-fill-mode: forwards;
+        font-size: 2rem;
+        @include transition-setup($delay: .5s);
       }
     }
 
@@ -46,26 +46,41 @@
       justify-self: flex-end;
       color: $highligh-titles-color;
       opacity: 0;
+      left: -100vw; 
       font-weight: bold;
       font-family: $secondary-font;
-      font-size: .7rem;
-      animation: quote-appearing $animation-duration $animation-function 1s;
-      animation-fill-mode: forwards;
+      font-size: .8rem;
+
+      @include transition-setup($delay: 1s);
     }
   }
 
   img {
     position: relative;
-    animation: img-appearing $animation-duration $animation-function;
+    top: -100vh;
+    opacity: 0;
+
+    @include transition-setup;
   }
 
-  @keyframes img-appearing {
-    from { top: -100vh; opacity: 0; }
-    to { top: 0; opacity: 1; }
-  }
+  &.reveal {
+    .text-presentation-container {
+      .details .full-name, .job-title {
+        opacity: 1;
+        bottom: 0;
+      }
+      img, .quote {
+        opacity: 1;
+      }
+  
+      .quote {
+        left: 0;
+      }
+    }
 
-  @keyframes quote-appearing {
-    from { left: -100vw; opacity: 0; }
-    to { left: 0; opacity: 1; }
+    img {
+      top: 0;
+      opacity: 1;
+    }
   }
 }

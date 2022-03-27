@@ -9,3 +9,7 @@
   position: relative;
   bottom: -100vh;
 }
+
+@mixin transition-setup($duration: $transition-duration, $delay: 0s) {
+  transition: all $duration $transition-function $delay;
+}

@@ -19,7 +19,9 @@
   }
 
   span {
-    color: $highlight-color;
+    // color: $highlight-color;
+    border-bottom: 1px solid white;
+    padding-bottom: 0;
   }
 
   .greetings, .skills-intro {

@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/Components/Intro.scss';
 import mainAvatar from '../assets/mainAvatar.jpg';
+import classNames from 'classnames';
 
-const Intro = () => {
+const Intro = ({ className }) => {
   return (
-    <section className='Intro'>
+    <section className={classNames('Intro', className)}>
       <div className="text-presentation-container">
         <section className="details">
           <span className="full-name">Yauheni Korsakas</span>

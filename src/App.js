@@ -7,31 +7,34 @@ import Skills from './Components/Skills';
 import './styles/App.scss';
 
 const App = () => {
-  const appElement = useRef(null);
-  const descriptionElement = useRef(null);
+  const [shouldRevealIntro, setShouldReveal] = useState(false);
 
   const onScroll = useCallback((e) => {
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', onScroll);
 
-    return () => {
-      window.removeEventListener(onScroll);
-    }
-  }, [onScroll]);
+  //   return () => {
+  //     window.removeEventListener(onScroll, );
+  //   }
+  // }, [onScroll]);
+  setTimeout(() => {
+    setShouldReveal(true);
+  }, 500);
 
   return (
-    <div ref={appElement} className="App">
-      <Intro />
-      <Description ref={descriptionElement} />
+    <div className="App">
+      <Intro className={classNames({'reveal': shouldRevealIntro})}/>
+      {/* <Description />
       <Skills />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
 
 const isItInViewport = () => {
+  // https://alvarotrigo.com/blog/css-animations-scroll/
   // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
   const appElement = document.getElementsByClassName('Description')[0];
   if (!appElement) return false;
