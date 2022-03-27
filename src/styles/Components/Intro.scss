@@ -51,7 +51,7 @@
       font-family: $secondary-font;
       font-size: .8rem;
 
-      @include transition-setup($delay: 5s);
+      @include transition-setup($delay: .7s);
     }
   }
 

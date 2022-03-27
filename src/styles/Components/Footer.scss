@@ -1,12 +1,13 @@
 @import '../variables.scss';
 
 .Footer {
+  position: relative;
   height: 3rem;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $secondary-background-color;
+  overflow-y: hidden;
   
   * {
     font-family: $primary-font;
@@ -23,5 +24,9 @@
     &:hover {
       border-color: white;
     }
+  }
+
+  &.reveal {
+    overflow-y: visible;
   }
 }

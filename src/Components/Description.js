@@ -1,9 +1,8 @@
-import React from 'react';
 import '../styles/Components/Description.scss';
+import React from 'react'
 import { AiOutlineCheck } from 'react-icons/ai'
-import classNames from 'classnames';
 
-const Description = ({ className = '' }) => {
+const Description = () => {
   const listItems = [
     <>Monitor your health. No one will take care of you except yourself. I do it because I want <span>to</span></>,
     <>Be able to get better every day <span>because</span></>,
@@ -12,7 +11,7 @@ const Description = ({ className = '' }) => {
   const postulates = listItems.map(item => <li key={item}><AiOutlineCheck /> {item}</li>);
 
   return (
-    <section className={classNames('Description', className)}>
+    <section className='Description'>
       <p className='greetings'>
         Greetings. My name is Zhenya and I am a full stack web developer from Belarus. Being born in 1996,
         I have already managed to know different aspects of life in general and development, but it is still not enough to say
@@ -28,9 +27,5 @@ const Description = ({ className = '' }) => {
     </section>
   )
 }
-
-/*<AiOutlineCheck /><li>Monitor your health. No one will take care of you except yourself. I do it because I want <span>to</span></li>
-        <li>Be able to get better every day <span>because</span></li>
-        <li>I want to know how far I can go, striving for the ideal</li> */
 
 export default Description

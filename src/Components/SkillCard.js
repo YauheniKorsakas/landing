@@ -1,13 +1,9 @@
 import '../styles/Components/SkillCard.scss';
-import React, { useContext } from 'react'
-import RevealContext from '../contexts/RevealContext';
-import classNames from 'classnames';
+import React from 'react'
 
-const SkillCard = ({ header = "", skills = []}) => {
-  const reveal = useContext(RevealContext);
-
+const SkillCard = ({ header = "", skills = [] }) => {
   return (
-    <section className={classNames('SkillCard', { 'reveal': reveal.skills })}>
+    <section className='SkillCard'>
       <h3>{header}</h3>
       <hr />
       <ul>

@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
 import '../styles/Components/Skills.scss';
+import React, { useMemo } from 'react';
 import SkillCard from './SkillCard';
 
 const Skills = () => {

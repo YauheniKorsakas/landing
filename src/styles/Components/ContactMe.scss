@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 $rotate-angle: 6deg;
 
@@ -12,21 +13,38 @@ $rotate-angle: 6deg;
   width: 10rem;
   border-radius: 5px;
   background: $secondary-background-color;
-  transform: rotate($rotate-angle);
-  bottom: 1rem;
+  bottom: 0;
   right: 4rem;
   padding-top: 10px;
+
+  @include transition-setup;
   
   * {
     justify-content: center;
     font-size: .9rem;
-    color: $secondary-color;
     font-family: $secondary-font;
     transform: rotate(-$rotate-angle);
   }
 
+  p:nth-child(1) {
+    color: transparent;
+  }
+
   p:nth-child(2) {
     text-transform: uppercase;
+    color: transparent;
+  }
+}
+
+.reveal .ContactMe {
+  transform: rotate($rotate-angle);
+  bottom: 4rem;
+
+  p:nth-child(1) {
+    color: $secondary-color;
+  }
+
+  p:nth-child(2) {
     color: $highlight-color;
   }
 }
