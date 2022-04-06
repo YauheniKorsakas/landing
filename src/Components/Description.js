@@ -1,6 +1,11 @@
 import '../styles/Components/Description.scss';
-import React from 'react'
-import { AiOutlineCheck } from 'react-icons/ai'
+import React from 'react';
+import { AiOutlineCheck, AiOutlineMessage } from 'react-icons/ai';
+import { VscRocket } from 'react-icons/vsc';
+import { RiComputerLine } from 'react-icons/ri';
+import { FaRegKeyboard, FaAngular } from 'react-icons/fa';
+import { SiDevdotto, SiDotnet } from 'react-icons/si';
+
 
 const Description = () => {
   const listItems = [
@@ -12,6 +17,13 @@ const Description = () => {
 
   return (
     <section className='Description'>
+      <AiOutlineMessage />
+      <VscRocket />
+      <RiComputerLine />
+      <FaRegKeyboard />
+      <SiDevdotto />
+      <SiDotnet />
+      <FaAngular /> 
       <p className='greetings'>
         Greetings. My name is Zhenya and I am a full stack web developer from Belarus. Being born in 1996,
         I have already managed to know different aspects of life in general and development, but it is still not enough to say

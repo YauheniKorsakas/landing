@@ -21,6 +21,9 @@ const App = () => {
     setTimeout(() => {
       const intro = document.getElementsByClassName('Intro')[0];
       
+      // https://alvarotrigo.com/blog/css-animations-scroll/ 
+      // TODO: check this link to use translateY instead of changing bottom
+
       if (intro) {
         intro.classList.add('reveal');
       }
