@@ -3,12 +3,12 @@
 
 .Footer {
   position: relative;
-  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $secondary-background-color;
   overflow-y: hidden;
+  background-color: $secondary-background-color;
+  height: 3rem;
   font-size: 1.3rem;
   
   * {
