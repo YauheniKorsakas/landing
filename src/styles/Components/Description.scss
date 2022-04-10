@@ -13,13 +13,8 @@
   * {
     font-family: $secondary-font;
     line-height: 2rem;
-    font-size: 1.1rem;
-    letter-spacing: .1rem;
-  }
-
-  span {
-    border-bottom: 1px solid white;
-    padding-bottom: 0;
+    font-size: 1.7rem;
+    letter-spacing: .2rem;
   }
 
   .greetings, .skills-intro {
@@ -70,6 +65,20 @@
     padding: 3rem;
     height: auto;
     min-height: auto;
+
+    * {
+      letter-spacing: .1rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@include media-query($breakpoint: $breakpoint-lg) {
+  .Description {
+    padding: 3rem;
 
     * {
       letter-spacing: .1rem;

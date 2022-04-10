@@ -31,12 +31,12 @@
       }
 
       .full-name {
-        font-size: 3rem;
+        font-size: 5rem;
         @include transition-setup($delay: .2s);
       }
 
       .job-title {
-        font-size: 2rem;
+        font-size: 3rem;
         @include transition-setup($delay: .5s);
       }
     }
@@ -49,7 +49,7 @@
       left: -100vw;
       font-weight: bold;
       font-family: $secondary-font;
-      font-size: .8rem;
+      font-size: 1.2rem;
 
       @include transition-setup($delay: .7s);
     }
@@ -91,12 +91,18 @@
     flex-direction: column;
 
     .text-presentation-container {
-      order: 2;
       justify-content: center;
       align-items: center;
 
+      .details {
+        align-items: center;
+
+        .full-name, .job-title {
+          font-size: 2.5rem;
+        }
+      }
       .quote {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
     }
 

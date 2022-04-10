@@ -9,6 +9,7 @@
   align-items: center;
   background-color: $secondary-background-color;
   overflow-y: hidden;
+  font-size: 1.3rem;
   
   * {
     font-family: $primary-font;
@@ -35,6 +36,15 @@
 @include media-query($breakpoint: $breakpoint-md) {
   .Footer {
     height: 3.5rem;
+
+    .ContactMe {
+      display: none;
+    }
+  }
+}
+
+@include media-query($breakpoint: $breakpoint-lg) {
+  .Footer {
 
     .ContactMe {
       display: none;

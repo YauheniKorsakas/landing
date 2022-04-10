@@ -32,6 +32,20 @@
 
     .SkillCard ul li {
       height: 3rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@include media-query($breakpoint: $breakpoint-lg) {
+  .Skills {
+    min-height: auto;
+    height: auto;
+    padding: 3rem 1rem 4rem;
+
+    .SkillCard ul li {
+      height: 3rem;
+      font-size: 1rem;
     }
   }
 }
