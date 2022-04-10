@@ -22,7 +22,7 @@ const Description = () => {
         {postulates}
       </ul>
       <p className='skills-intro'>
-        I have been working as a programmer since 2017, and during this time I managed to acquire many skills.
+        I have been working as a programmer since 2017. During this time, mostly evolving myself as backend developer, I managed to acquire many skills. 
         Here are <span>the main ones:</span></p>
     </section>
   )

@@ -2,7 +2,7 @@
 @import '../mixins.scss';
 
 .Description {
-  padding: 7rem;
+  padding: 10rem;
   width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -14,6 +14,7 @@
     font-family: $secondary-font;
     line-height: 2rem;
     font-size: 1.1rem;
+    letter-spacing: .1rem;
   }
 
   span {
