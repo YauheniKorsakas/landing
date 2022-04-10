@@ -13,3 +13,9 @@
 @mixin transition-setup($duration: $transition-duration, $delay: 0s) {
   transition: all $duration $transition-function $delay;
 }
+
+@mixin media-query($breakpoint: $breakpoint-md) {
+  @media only screen and (max-width: $breakpoint) {
+    @content
+  }
+}

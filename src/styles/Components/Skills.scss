@@ -8,11 +8,18 @@
   padding: 3rem 10rem 4rem;
   width: 100vw;
   min-height: 100vh;
+  height: 100vh;
   gap: 1.4rem;
   position: relative;
+  overflow-y: hidden;
 
   h3 {
     margin-bottom: .7rem;
   }
+}
 
+@include media-query($breakpoint-lg) {
+  .Skills {
+    padding: 3rem 5rem 1rem;
+  }
 }

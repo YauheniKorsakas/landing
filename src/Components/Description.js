@@ -1,11 +1,6 @@
 import '../styles/Components/Description.scss';
 import React from 'react';
-import { AiOutlineCheck, AiOutlineMessage } from 'react-icons/ai';
-import { VscRocket } from 'react-icons/vsc';
-import { RiComputerLine } from 'react-icons/ri';
-import { FaRegKeyboard, FaAngular } from 'react-icons/fa';
-import { SiDevdotto, SiDotnet } from 'react-icons/si';
-
+import { AiOutlineCheck } from 'react-icons/ai';
 
 const Description = () => {
   const listItems = [
@@ -13,17 +8,10 @@ const Description = () => {
     <>Be able to get better every day <span>because</span></>,
     <>I want to know how far I can go, striving for the ideal</>
   ];
-  const postulates = listItems.map(item => <li key={item}><AiOutlineCheck /> {item}</li>);
+  const postulates = listItems.map((item) => <li key={item}><AiOutlineCheck /> {item}</li>);
 
   return (
     <section className='Description'>
-      <AiOutlineMessage />
-      <VscRocket />
-      <RiComputerLine />
-      <FaRegKeyboard />
-      <SiDevdotto />
-      <SiDotnet />
-      <FaAngular /> 
       <p className='greetings'>
         Greetings. My name is Zhenya and I am a full stack web developer from Belarus. Being born in 1996,
         I have already managed to know different aspects of life in general and development, but it is still not enough to say
@@ -35,7 +23,7 @@ const Description = () => {
       </ul>
       <p className='skills-intro'>
         I have been working as a programmer since 2017, and during this time I managed to acquire many skills.
-        Here are <span>the main ones</span></p>
+        Here are <span>the main ones:</span></p>
     </section>
   )
 }
