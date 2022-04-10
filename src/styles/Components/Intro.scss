@@ -85,7 +85,7 @@
   }
 }
 
-@include media-query($breakpoint: $breakpoint-md) {
+@include media-query($breakpoint: $breakpoint-lg) {
   .Intro {
     height: 100vh;
     flex-direction: column;
