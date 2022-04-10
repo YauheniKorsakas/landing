@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .Footer {
   position: relative;
@@ -28,5 +29,15 @@
 
   &.reveal {
     overflow-y: visible;
+  }
+}
+
+@include media-query($breakpoint: $breakpoint-md) {
+  .Footer {
+    height: 3.5rem;
+
+    .ContactMe {
+      display: none;
+    }
   }
 }

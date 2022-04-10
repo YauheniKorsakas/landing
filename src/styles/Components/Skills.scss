@@ -23,3 +23,14 @@
     padding: 3rem 5rem 1rem;
   }
 }
+
+@include media-query($breakpoint: $breakpoint-md) {
+  .Skills {
+    min-height: auto;
+    height: auto;
+
+    .SkillCard ul li {
+      height: 3rem;
+    }
+  }
+}

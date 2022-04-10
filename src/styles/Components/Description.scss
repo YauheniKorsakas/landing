@@ -2,7 +2,7 @@
 @import '../mixins.scss';
 
 .Description {
-  padding: 7rem 7rem;
+  padding: 7rem;
   width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -34,7 +34,6 @@
   }
 
   ul {
-    // max-width: 35rem;
     list-style: none;
     position: relative;
     padding-left: 4rem;
@@ -65,3 +64,18 @@
   }
 }
 
+@include media-query($breakpoint: $breakpoint-md) {
+  .Description {
+    padding: 3rem;
+    height: auto;
+    min-height: auto;
+
+    * {
+      letter-spacing: .1rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
