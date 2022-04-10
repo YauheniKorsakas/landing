@@ -44,10 +44,7 @@
 }
 
 @include media-query($breakpoint: $breakpoint-lg) {
-  .Footer {
-
-    .ContactMe {
-      display: none;
-    }
+  .Footer .ContactMe {
+    display: none;
   }
 }
