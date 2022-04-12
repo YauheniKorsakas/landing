@@ -8,7 +8,7 @@ const Description = () => {
     <>Be able to get better every day <span>because...</span></>,
     <>I want to know how far I can go, striving for the ideal</>
   ];
-  const postulates = listItems.map((item) => <li key={item}><AiOutlineCheck /> {item}</li>);
+  const postulates = listItems.map((item, i) => <li key={i}><AiOutlineCheck /> {item}</li>);
 
   return (
     <section className='Description'>
