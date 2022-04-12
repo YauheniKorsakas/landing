@@ -101,6 +101,7 @@
           font-size: 2.5rem;
         }
       }
+
       .quote {
         font-size: 1.5rem;
       }
@@ -113,5 +114,11 @@
     &.reveal {
       left: 50%;
     }
+  }
+}
+
+@include media-query($breakpoint: $breakpoint-lt) {
+  .Intro .text-presentation-container .quote {
+    padding-bottom: 7rem;
   }
 }
