@@ -1,7 +1,7 @@
 {
   "name": "my-own-landing",
   "version": "0.1.0",
-  "homepage": "https://yauhenikorsakas.github.io/landing",
+  "homepage": "https://YauheniKorsakas.github.io/landing",
   "private": true,
   "dependencies": {
     "@types/node": "^17.0.23",
